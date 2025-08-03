@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.inner_container {
+  display: flex;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.prime_number_checker {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prime_number_checker h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+#input {
+  height: 50px;
+  font-size: 18px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#input:focus {
+  border-color: #007bff;
+}
+
+#show {
+  height: 45px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#show:hover {
+  background: #0056b3;
+}
+
+.screen {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.result {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.result_table,
+.result_table th,
+.result_table td {
+  border: 1px solid #666;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+/* layout mobile-friendly. */
+@media (max-width: 768px) {
+  .inner_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .prime_number_checker,
+  .screen {
+    width: 100%;
+  }
+}
