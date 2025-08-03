@@ -8,40 +8,50 @@
 body {
   background: #f8f9fa;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 20px;
+  gap: 20px;
 }
 
 .inner_container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
-.prime_number_checker {
-  flex: 1;
+.prime_number_checker,
+.screen {
+  flex: 1 1 400px;
   background: #ffffff;
   border: 1px solid #ccc;
   border-radius: 12px;
   padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prime_number_checker {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .prime_number_checker h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 26px;
   color: #007bff;
+  text-align: center;
 }
 
 #input {
@@ -75,18 +85,13 @@ body {
 }
 
 .screen {
-  flex: 1;
-  background: #fff;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
 
 .result {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .result_table,
@@ -99,15 +104,34 @@ body {
   margin-top: 20px;
   width: 100%;
 }
-/* layout mobile-friendly. */
+
+.footer {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.ftr_param {
+  font-size: 14px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .inner_container {
     flex-direction: column;
-    gap: 20px;
+    align-items: stretch;
   }
 
   .prime_number_checker,
   .screen {
+    width: 100%;
+  }
+
+  #input {
     width: 100%;
   }
 }
